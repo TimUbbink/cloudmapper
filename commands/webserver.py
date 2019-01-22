@@ -90,7 +90,7 @@ def run(arguments):
     if args.is_public:
         listening_host = '::' if args.is_ipv6 else '0.0.0.0'
     else:
-        listening_host = '::1' if args.is_ipv6 else '127.0.0.1'
+        listening_host = '::1' if args.is_ipv6 else '0.0.0.0'
 
     Handler = MyHTTPRequestHandler
     Handler.extensions_map['.svg'] = 'image/svg+xml'
